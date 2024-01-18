@@ -26,10 +26,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="">
+          <div className="flex flex-col">
             <Navbar />
-            <main>{children}</main>
-            <Sidebar />
+            <div className="flex flex-1 mt-14">
+              <Sidebar />
+              <main className="flex-1 p-4">{children}</main>
+            </div>
           </div>
         </ThemeProvider>
       </body>
