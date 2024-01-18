@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { LoginButton } from "./login-button";
 import { ModeToggle } from "./theme";
 import { League_Spartan } from "next/font/google";
+import { Contact } from "./contact";
 
 const league_Spartan = League_Spartan({ subsets: ["latin"] });
 
@@ -10,11 +12,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h4 className={`${league_Spartan.className} font-bold text-[30px]`}>
+            <Link
+              href="/"
+              className={`${league_Spartan.className} font-bold text-[30px]`}
+            >
               academy.
-            </h4>
+            </Link>
           </div>
           <div className="flex items-center gap-2">
+            <Contact />
             <ModeToggle />
             <LoginButton />
           </div>
