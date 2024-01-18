@@ -20,10 +20,10 @@ export function Contact() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Biz bilan bog'laning.</DialogTitle>
+          <DialogTitle>Biz bilan bog&apos;laning.</DialogTitle>
           <DialogDescription>
-            Kurslar haqida ma'lumot olishingiz uchun formani to'diring va
-            yuborish tugmasini bosing!
+            Kurslar haqida ma&apos;lumot olishingiz uchun formani to&apos;diring
+            va yuborish tugmasini bosing!
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -31,13 +31,21 @@ export function Contact() {
             <Label htmlFor="username" className="text-right">
               Telegram username
             </Label>
-            <Input id="username" className="col-span-3" placeholder="@username"/>
+            <Input
+              id="username"
+              className="col-span-3"
+              placeholder="@username"
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="message" className="text-right">
               Xabaringiz
             </Label>
-            <textarea id="message" placeholder="shu yerga yozing" className="col-span-3" />
+            <textarea
+              id="message"
+              placeholder="shu yerga yozing"
+              className="col-span-3"
+            />
           </div>
         </div>
         <DialogFooter>
