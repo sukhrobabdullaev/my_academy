@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="text-center text-[40px] font-bold">
+      <h1 className="ml-64 text-[40px] font-bold">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
         assumenda quam aspernatur nisi rerum voluptatem, ipsa numquam alias
         dignissimos autem magni maxime nihil eius sapiente quia consequuntur
