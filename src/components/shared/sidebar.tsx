@@ -71,7 +71,7 @@ const Sidebar = () => {
         </Link>
       </ul>
       <Link
-        href="/login"
+        href="/sign-in"
         className={`${ubuntu.className} absolute bottom-20 flex text-lg items-center gap-1 p-2 rounded-md transition-all border duration-500 ease-in-out dark:hover:bg-[#3bc43f]`}
       >
         Dasturga kirish <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
