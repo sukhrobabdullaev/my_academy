@@ -41,7 +41,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="">
+      <div>
         <Image src={"/js-icon.png"} width={250} height={200} alt="js-icon" />
       </div>
     </div>
