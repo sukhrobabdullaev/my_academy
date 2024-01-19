@@ -27,7 +27,7 @@ const Sidebar = () => {
           href={"/"}
           className={`${
             pathname === "/" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
         >
           <HomeIcon className="w-6 h-6" />
           Bosh sahifa
@@ -36,7 +36,7 @@ const Sidebar = () => {
           href={"/articles"}
           className={`${
             pathname === "/articles" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
         >
           {/* <CodeBracketSquareIcon className="w-6 h-6"/> */}
           <DocumentTextIcon className="w-6 h-6" />
@@ -55,7 +55,7 @@ const Sidebar = () => {
           href={"/courses"}
           className={`${
             pathname === "/courses" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
         >
           <ComputerDesktopIcon className="w-6 h-6" />
           Barch kurslar
@@ -64,7 +64,7 @@ const Sidebar = () => {
           href={"/projects"}
           className={`${
             pathname === "/projects" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
         >
           <FolderIcon className="w-6 h-6" />
           Loyihalar
