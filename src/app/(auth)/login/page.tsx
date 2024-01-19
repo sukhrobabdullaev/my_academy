@@ -1,7 +1,7 @@
-const page = () => {
+const Login = () => {
   return (
-    <div>page</div>
+    <div className="ml-64">Login</div>
   )
 }
 
-export default page
+export default Login

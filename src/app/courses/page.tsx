@@ -1,6 +1,6 @@
 const Courses = () => {
   return (
-    <div>Courses</div>
+    <div className="ml-64">Courses</div>
   )
 }
 
