@@ -33,10 +33,19 @@ const Sidebar = () => {
           Bosh sahifa
         </Link>
         <Link
+          href={"/courses"}
+          className={`${
+            pathname === "/courses" && "bg-[#3bc43f]"
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
+        >
+          <ComputerDesktopIcon className="w-6 h-6" />
+          Barch kurslar
+        </Link>
+        <Link
           href={"/articles"}
           className={`${
             pathname === "/articles" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto border rounded-md transition-all duration-300 ease-in-out border-[#3bc43f]  hover:border-[#288829]`}
         >
           {/* <CodeBracketSquareIcon className="w-6 h-6"/> */}
           <DocumentTextIcon className="w-6 h-6" />
@@ -46,20 +55,12 @@ const Sidebar = () => {
           href={"/source_code"}
           className={`${
             pathname === "/source_code" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 border p-3 w-full mx-auto border-[#3bc43f] rounded-md hover:border-[#288829]`}
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md `}
         >
           <CodeBracketSquareIcon className="w-6 h-6" />
           Kod manbalari
         </Link>
-        <Link
-          href={"/courses"}
-          className={`${
-            pathname === "/courses" && "bg-[#3bc43f]"
-          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
-        >
-          <ComputerDesktopIcon className="w-6 h-6" />
-          Barch kurslar
-        </Link>
+
         <Link
           href={"/projects"}
           className={`${
