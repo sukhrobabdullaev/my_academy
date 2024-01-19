@@ -26,15 +26,17 @@ const Sidebar = () => {
         <Link
           href={"/"}
           className={`${
-            pathname === "/" ? "bg-[#3bc43f]" : ""
+            pathname === "/" && "bg-[#3bc43f]"
           } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
         >
           <HomeIcon className="w-6 h-6" />
-          Bosh Sahifa
+          Bosh sahifa
         </Link>
         <Link
           href={"/articles"}
-          className="flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800"
+          className={`${
+            pathname === "/articles" && "bg-[#3bc43f]"
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
         >
           {/* <CodeBracketSquareIcon className="w-6 h-6"/> */}
           <DocumentTextIcon className="w-6 h-6" />
@@ -42,21 +44,27 @@ const Sidebar = () => {
         </Link>
         <Link
           href={"/source_code"}
-          className="flex text-lg items-center gap-1 border p-3 w-full mx-auto border-[#3bc43f] rounded-md hover:border-[#288829]"
+          className={`${
+            pathname === "/source_code" && "bg-[#3bc43f]"
+          } flex text-lg items-center gap-1 border p-3 w-full mx-auto border-[#3bc43f] rounded-md hover:border-[#288829]`}
         >
           <CodeBracketSquareIcon className="w-6 h-6" />
-          Kod Manbalari
+          Kod manbalari
         </Link>
         <Link
           href={"/courses"}
-          className="flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800"
+          className={`${
+            pathname === "/courses" && "bg-[#3bc43f]"
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
         >
           <ComputerDesktopIcon className="w-6 h-6" />
           Barch kurslar
         </Link>
         <Link
           href={"/projects"}
-          className="flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800"
+          className={`${
+            pathname === "/projects" && "bg-[#3bc43f]"
+          } flex text-lg items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-[2000ms] ease-in-out dark:hover:bg-zinc-800`}
         >
           <FolderIcon className="w-6 h-6" />
           Loyihalar
