@@ -24,14 +24,14 @@ const Home = () => {
         </p>
         <div className="flex items-center gap-3 mt-3">
           <Link
-            href={"/courses"}
+            href="/courses"
             className={`${pathname === "/courses" && "bg-[#3bc43f]"} p-3 text-center w-1/4 rounded-md transition-all duration-300 ease-in-out border`}
           >
             Kurslar
           </Link>
           <Link
-            href={"/projects"}
-            className={`${pathname === "/projects" && "bg-[#3bc43f]"}  p-3 text-center w-1/4  rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800 bg-[#3bc43f] border`}
+            href="/projects"
+            className={`p-3 text-center w-1/4  rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800 bg-[#3bc43f] border`}
           >
             Loyihalar
           </Link>
