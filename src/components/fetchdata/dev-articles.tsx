@@ -3,14 +3,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -75,8 +73,8 @@ const MediumPosts: React.FC = () => {
       <h2>Your DEV.TO Posts</h2>
       <ul className="flex flex-wrap gap-2">
         {posts.map((post) => (
-          <Link href={post.canonical_url}>
-            <Card className="w-[400px] flex flex-col gap-4" key={post.id}>
+          <Link href={post.canonical_url} key={post.id}>
+            <Card className="w-[400px] flex flex-col gap-4">
               <CardHeader>
                 <div className="flex justify-between">
                   <div className="flex items-center gap-1">
