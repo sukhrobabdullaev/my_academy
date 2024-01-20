@@ -5,6 +5,9 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
   },
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "media.dev.to" }],
+  },
 };
 
 module.exports = nextConfig;
