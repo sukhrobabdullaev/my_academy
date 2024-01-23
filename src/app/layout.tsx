@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import NextTransitionBar, { nprogress } from "next-transition-bar";
 // import NextBreadcrumb from "@/components/shared/breadcrump";
 import { ClerkProvider } from "@clerk/nextjs";
-import type { AppProps } from "next/app";
 import { dark } from "@clerk/themes";
 import { AppWrapper } from "@/context";
 
