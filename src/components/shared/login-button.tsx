@@ -2,14 +2,21 @@
 
 import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { UserButton, useAuth } from "@clerk/nextjs";
+import { UserButton, auth, useAuth, useUser } from "@clerk/nextjs";
 
 export function LoginButton() {
-  const auth = useAuth();
+  const { userId } = useAuth();
+  // isLoaded: true,
+  // isSignedIn: true,
+  // userId: 'dcdhfbhb'
+  const { user } = useUser();
+  // isLoaded: true
+  // isSignedIn: false
+  // user: null (data)
 
   return (
     <>
-      {auth.userId ? (
+      {userId ? (
         <UserButton afterSignOutUrl="/" />
       ) : (
         <Button asChild className="bg-[#3bc43f] hover:bg-[#3bc43f]">
