@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import NextTransitionBar, { nprogress } from "next-transition-bar";
 // import NextBreadcrumb from "@/components/shared/breadcrump";
 import { ClerkProvider } from "@clerk/nextjs";
+import type { AppProps } from "next/app";
 import { dark } from "@clerk/themes";
 import { AppWrapper } from "@/context";
 
@@ -56,13 +57,13 @@ export default function RootLayout({
                 // transformCSS={(css) => <style nonce={undefined}>{css}</style>}
               />
               {/* <NextBreadcrumb
-            homeElement={"Home"}
-            separator={<span> &gt; </span>}
-            activeClasses="text-amber-500"
-            containerClasses="flex py-5"
-            listClasses="hover:underline mx-2 font-bold"
-            capitalizeLinks
-          /> */}
+                homeElement={"Home"}
+                separator={<span> &gt; </span>}
+                activeClasses="text-amber-500"
+                containerClasses="flex py-5"
+                listClasses="hover:underline mx-2 font-bold"
+                capitalizeLinks
+              /> */}
               <div className="flex flex-col">
                 <Navbar />
                 <div className="flex flex-1 mt-14">

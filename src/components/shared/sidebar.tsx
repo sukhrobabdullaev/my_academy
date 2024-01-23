@@ -1,24 +1,28 @@
 "use client";
 
 import { useAppContext } from "@/context";
+import { useAuth, useUser } from "@clerk/nextjs";
 import {
   ArrowRightEndOnRectangleIcon,
   CodeBracketSquareIcon,
   ComputerDesktopIcon,
   DocumentTextIcon,
   FolderIcon,
-  FolderOpenIcon,
   HomeIcon,
 } from "@heroicons/react/16/solid";
+import { DashboardIcon } from "@radix-ui/react-icons";
 import { Ubuntu } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["300", "500"] });
 
 const Sidebar = () => {
   const { isShow } = useAppContext();
   const pathname = usePathname();
+  const { isSignedIn, user, isLoaded } = useUser();
+
   return (
     <>
       <div className="bg-zinc-50 hidden md:block sm:block dark:bg-zinc-900 p-4 fixed top-14 lg:w-64  left-0 h-screen border-r">
@@ -133,12 +137,15 @@ const Sidebar = () => {
               <FolderIcon className="w-6 h-6" />
               <span>Loyihalar</span>
             </Link>
+
+            {isSignedIn && <Button>chdbvhfbvf</Button>}
           </ul>
           <Link
             href="/sign-in"
             className={`${ubuntu.className} absolute bottom-20 flex text-lg items-center gap-1 p-2 rounded-md transition-all border duration-500 ease-in-out dark:hover:bg-[#3bc43f]`}
           >
             <span>Dasturga kirish</span>
+            {/* {userId && <SignOutButton>Chiqish</SignOutButton>} */}
             <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
           </Link>
         </div>
