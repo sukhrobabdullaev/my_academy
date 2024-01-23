@@ -1,11 +1,11 @@
-"use client";
+import { NextRequest, NextResponse } from 'next/server';
+import { getAuth, clerkClient } from '@clerk/nextjs/server';
+import { Ubuntu } from "next/font/google";
 
-import { useUser } from "@clerk/nextjs";
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["300", "500"] });
 
 const Edit = () => {
-  const { isSignedIn, user, isLoaded } = useUser();
-  console.log(user);
-  return <div className="ml-64">Edit</div>;
+  return <div className={`${ubuntu.className} ml-64`}>Edit</div>;
 };
 
 export default Edit;
