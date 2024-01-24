@@ -6,6 +6,7 @@ import { League_Spartan } from "next/font/google";
 import { Contact } from "./contact";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useAppContext } from "@/context";
+import { SidebarCloseIcon } from "lucide-react";
 
 const league_Spartan = League_Spartan({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ const Navbar = () => {
   const { isShow, setIsShow } = useAppContext();
 
   const handleShow = () => {
-    setIsShow(!isShow)
+    setIsShow(!isShow);
   };
 
   return (
@@ -21,10 +22,18 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <HamburgerMenuIcon
-              className="w-5 h-5 sm:hidden block cursor-pointer"
-              onClick={handleShow}
-            />
+            {isShow ? (
+              <HamburgerMenuIcon
+                className="w-5 h-5 sm:hidden block cursor-pointer"
+                onClick={handleShow}
+              />
+            ) : (
+              <SidebarCloseIcon
+                className="w-5 h-5 sm:hidden block cursor-pointer"
+                onClick={handleShow}
+              />
+            )}
+          
             <Link
               href="/"
               className={`${league_Spartan.className} font-bold text-[30px]`}
