@@ -41,7 +41,7 @@ const MediumPosts: React.FC = () => {
         const response = await axios.get(
           `https://dev.to/api/articles?username=${username}`
         );
-        console.log(response.data);
+        // console.log(response.data);
         const postsWithUuid = response.data.map((post: Post) => ({
           ...post,
           id: uuidv4(),
@@ -66,7 +66,7 @@ const MediumPosts: React.FC = () => {
     usernames.forEach((username) => fetchMediumPosts(username));
   }, []); // Run only once on component mount
 
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <div>
@@ -74,7 +74,7 @@ const MediumPosts: React.FC = () => {
       <ul className="flex flex-wrap gap-2">
         {posts.map((post) => (
           <Link href={post.canonical_url} key={post.id}>
-            <Card className="w-[400px] flex flex-col gap-4">
+            <Card className="lg:w-[400px] flex flex-col gap-4">
               <CardHeader>
                 <div className="flex justify-between">
                   <div className="flex items-center gap-1">
