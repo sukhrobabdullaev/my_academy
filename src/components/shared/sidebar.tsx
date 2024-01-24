@@ -15,14 +15,6 @@ import { Ubuntu } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Loader } from "../ui/loader";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { TooltipDemo } from "./tooltipDemo";
-
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["300", "500"] });
 
 const Sidebar = () => {
@@ -40,7 +32,7 @@ const Sidebar = () => {
       <div
         className={`bg-zinc-50 transition ease-in duration-300 ${
           isShow && "hidden"
-        }  md:block sm:block dark:bg-zinc-900 p-4 fixed top-14 lg:w-64 left-0 h-screen border-r`}
+        }  md:block sm:block dark:bg-zinc-900 p-4 fixed top-14 lg:w-64 left-0 h-full border-r`}
       >
         <ul
           className={`flex md:gap-4 gap-2 items-center justify-center flex-col pt-20 ${ubuntu.className}`}
