@@ -35,7 +35,7 @@ const Sidebar = () => {
         }  md:block sm:block dark:bg-zinc-900 p-4 fixed top-14 lg:w-64 left-0 h-full border-r`}
       >
         <ul
-          className={`flex md:gap-4 gap-2 items-center justify-center flex-col pt-20 ${ubuntu.className}`}
+          className={`flex md:gap-3 gap-2 items-center justify-center flex-col pt-20 ${ubuntu.className}`}
         >
           <Link
             href={"/"}

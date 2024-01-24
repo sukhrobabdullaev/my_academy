@@ -70,7 +70,7 @@ const MediumPosts: React.FC = () => {
 
   return (
     <div>
-      <h2>Your DEV.TO Posts</h2>
+      <h2 className="mb-2 text-lg text-center font-bold">Top Articles for Web Development</h2>
       <ul className="flex flex-wrap gap-2">
         {posts.map((post) => (
           <Link href={post.canonical_url} key={post.id}>

@@ -1,7 +1,9 @@
-const Courses = () => {
+import React from 'react'
+
+const page = () => {
   return (
-    <div className="ml-64">Courses</div>
+    <div>page</div>
   )
 }
 
-export default Courses
+export default page
