@@ -2,9 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 // import ReactPlayer from "react-player";
+interface Video {
+  id: string;
+  title: string;
+  path: string;
+}
 
-const Courses = () => {
-  let videosrc = "/videos/lesson2.mp4";
+interface VideoCategory {
+  [key: string]: Video[];
+}
+
+const Courses = async () => {
+  // let videosrc = "/videos/lesson2.mp4";
+  try {
+    const res = await fetch("/public/data/index.json");
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.statusText}`);
+    }
+
+    const videos: VideoCategory = await res.json();
+    console.log(videos);
+  } catch (error) {
+    console.error(error);
+  }
+
   return (
     <div className="lg:ml-64 md:ml-20 sm:ml-24">
       {/* <ReactPlayer
