@@ -70,7 +70,9 @@ const MediumPosts: React.FC = () => {
 
   return (
     <div>
-      <h2 className="mb-2 text-lg text-center font-bold">Top Articles for Web Development</h2>
+      <h2 className="mb-2 text-lg text-center font-bold">
+        Top Articles for Web Development
+      </h2>
       <ul className="flex flex-wrap gap-2">
         {posts.map((post) => (
           <Link href={post.canonical_url} key={post.id}>
@@ -100,7 +102,8 @@ const MediumPosts: React.FC = () => {
                       alt={post.title}
                       width={400}
                       height={100}
-                      // className="rounded-full border-4 border-[#3bc43f]"
+                      style={{ width: "auto", height: "auto" }}
+                      priority={true}
                     />
                   ) : (
                     ""

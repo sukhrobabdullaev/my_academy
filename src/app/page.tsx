@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </div>
       <div className="relative sm:w-64 sm:h-64">
-        <Image src={"/js-icon.png"} fill alt="js-icon" />
+        <Image src={"/js-icon.png"} fill priority alt="js-icon" />
       </div>
     </div>
   );
