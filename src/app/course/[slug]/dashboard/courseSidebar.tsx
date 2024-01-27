@@ -37,7 +37,7 @@ const CourseSidebar = () => {
           <AccordionItem value={`item-2`}>
             <AccordionTrigger>MODULE 2</AccordionTrigger>
             {reactVideos.map((el) => (
-              <AccordionContent>
+              <AccordionContent key={el.id}>
                 <Link
                   href={"/"}
                   className={`flex text-sm items-center gap-1 p-3 w-full mx-auto rounded-md transition-all duration-300 ease-in-out dark:hover:bg-zinc-800`}
