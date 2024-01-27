@@ -6,23 +6,9 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
-
-// import ReactPlayer from "react-player";
-
 const Courses = async () => {
   return (
     <div className="lg:ml-64 md:ml-20 sm:ml-24">
-      {/* <ReactPlayer
-        width="500px"
-        height="400px"
-        url={videosrc}
-        controls={true}
-        // light is usefull incase of dark mode
-        light={false}
-        // picture in picture
-        pip={true}
-      />
-      <source src={videosrc} type="video/mp4" /> */}
       <h2 className="text-[30px] mb-3">Kurslar</h2>
       <div className="flex items-center gap-3 flex-wrap">
         <HoverCard>
@@ -72,7 +58,6 @@ const Courses = async () => {
           />
           <h3 className="font-bold text-md">ReactJS</h3>
         </Link>
-     
       </div>
     </div>
   );

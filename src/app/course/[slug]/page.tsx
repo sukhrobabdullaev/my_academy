@@ -1,12 +1,18 @@
-import NextBreadcrumb from "@/components/shared/breadcrump";
 import { Button } from "@/components/ui/button";
+import { reactVideos } from "@/data";
 import { Quicksand } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["300", "500"] });
 
-const CourseDetails = () => {
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+const CourseDetails = ({ params: { slug } }: Props) => {
   return (
     <div className="lg:ml-64 md:ml-20 sm:ml-24 md:p-10 sm:p-5">
       <div
@@ -18,7 +24,7 @@ const CourseDetails = () => {
             kurs
           </h1>
           <p className="text-sm lg:text-lg sm:text-base text-[18px] leading-7">
-            Xozirda mashhur JavaScript frameworklaridan biri ReactJSni to'liq
+            Hozirda mashhur JavaScript frameworklaridan biri ReactJSni to'liq
             o'rganing. ReactJS darslari to'liq kurs o'zbek tilida. ReactJS
             amaliyot va loyihalar
           </p>
@@ -154,7 +160,7 @@ const CourseDetails = () => {
           laborum explicabo natus architecto. Necessitatibus, odit voluptatem.
         </div>
         <Button asChild className="bg-[#3bc43f] hover:bg-[#3bc43f]">
-          <Link href="/course/react/dashboard">Kirish</Link>
+          <Link href={`/course/${reactVideos[0].name}/dashboard`}>Kirish</Link>
         </Button>
       </div>
     </div>
