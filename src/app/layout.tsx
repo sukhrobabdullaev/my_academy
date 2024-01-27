@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+"use client";
+
+// import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar";
@@ -9,19 +11,24 @@ import NextTransitionBar, { nprogress } from "next-transition-bar";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { AppWrapper } from "@/context";
+import { usePathname } from "next/navigation";
+import CourseSidebar from "./course/[slug]/dashboard/courseSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Academy",
-  description: "Sukhrob Academy",
-};
+// export const metadata: Metadata = {
+//   title: "Academy",
+//   description: "Sukhrob Academy",
+// };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <ClerkProvider
       appearance={{
@@ -66,7 +73,11 @@ export default function RootLayout({
               <div className="flex flex-col">
                 <Navbar />
                 <div className="flex flex-1 mt-14">
-                  <Sidebar />
+                  {pathname.includes("/course/react/") ? (
+                    <CourseSidebar />
+                  ) : (
+                    <Sidebar />
+                  )}
                   <main className="flex-1 p-6">{children}</main>
                 </div>
               </div>
