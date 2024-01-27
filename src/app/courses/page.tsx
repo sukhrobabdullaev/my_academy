@@ -6,6 +6,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
+
 // import ReactPlayer from "react-player";
 
 const Courses = async () => {
@@ -22,7 +23,7 @@ const Courses = async () => {
         pip={true}
       />
       <source src={videosrc} type="video/mp4" /> */}
-      <h2>Kurslar</h2>
+      <h2 className="text-[30px] mb-3">Kurslar</h2>
       <div className="flex items-center gap-3 flex-wrap">
         <HoverCard>
           <HoverCardTrigger className="relative">
@@ -40,7 +41,7 @@ const Courses = async () => {
             </Link>
           </HoverCardTrigger>
           <HoverCardContent className="absolute bottom-2">
-            <div className="line-clamp-2">
+            <div className="line-clamp-2 text-sm">
               Hozirda mashhur JavaScript frameworklaridan biri ReactJSni to'liq
               o'rganing. ReactJS darslari to'liq kurs o'zbek tilida. ReactJS
               amaliyot va loyihalar
@@ -71,66 +72,7 @@ const Courses = async () => {
           />
           <h3 className="font-bold text-md">ReactJS</h3>
         </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
+     
       </div>
     </div>
   );
