@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { reactVideos } from "@/data";
 import { Quicksand } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { Ivideos } from "./dashboard/components/courseSidebar";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["300", "500"] });
 
@@ -12,7 +12,10 @@ interface Props {
   };
 }
 
-const CourseDetails = ({ params: { slug } }: Props) => {
+const CourseDetails = async ({ params: { slug } }: Props) => {
+  const response = await fetch("http://localhost:3000/api");
+  const result: Ivideos[] = await response.json();
+
   return (
     <div className="lg:ml-64 md:ml-20 sm:ml-24 md:p-10 sm:p-5">
       <div
@@ -160,7 +163,7 @@ const CourseDetails = ({ params: { slug } }: Props) => {
           laborum explicabo natus architecto. Necessitatibus, odit voluptatem.
         </div>
         <Button asChild className="bg-[#3bc43f] hover:bg-[#3bc43f]">
-          <Link href={`/course/${reactVideos[0].name}/dashboard`}>Kirish</Link>
+          <Link href={`/course/${result[0].name}/dashboard`}>Kirish</Link>
         </Button>
       </div>
     </div>

@@ -34,33 +34,10 @@ const Courses = async () => {
             </div>
           </HoverCardContent>
         </HoverCard>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
-        <Link
-          href="course/react"
-          className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center   justify-center"
-        >
-          <Image
-            src="/courses/react.png"
-            alt="react"
-            width={150}
-            height={150}
-          />
-          <h3 className="font-bold text-md">ReactJS</h3>
-        </Link>
+      
       </div>
     </div>
   );
 };
 
-export default Courses;
+export default Courses

@@ -13,6 +13,7 @@ import { dark } from "@clerk/themes";
 import { AppWrapper } from "@/context";
 import { usePathname } from "next/navigation";
 import CourseSidebar from "./course/[slug]/dashboard/courseSidebar";
+import ParentComponent from "./course/[slug]/dashboard/components/parent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +27,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <ClerkProvider
@@ -74,7 +75,7 @@ export default function RootLayout({
                 <Navbar />
                 <div className="flex flex-1 mt-14">
                   {pathname.includes("/course/react/") ? (
-                    <CourseSidebar />
+                    <ParentComponent />
                   ) : (
                     <Sidebar />
                   )}

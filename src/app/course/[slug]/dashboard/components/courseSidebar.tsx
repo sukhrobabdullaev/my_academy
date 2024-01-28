@@ -6,11 +6,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { reactVideos } from "@/data";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["300", "500"] });
+export interface Ivideos {
+  id: string;
+  name?: string;
+  title: string;
+  path: string;
+}
 
-const CourseSidebar = () => {
+interface CourseSidebarProps {
+  data: Ivideos[];
+}
+
+const CourseSidebar: React.FC<CourseSidebarProps> = ({ data }) => {
   return (
     <>
       <div
@@ -23,7 +32,7 @@ const CourseSidebar = () => {
         >
           <AccordionItem value={`item-1`}>
             <AccordionTrigger>MODULE 1</AccordionTrigger>
-            {reactVideos.map((el) => (
+            {data.map((el) => (
               <AccordionContent key={el.id}>
                 <Link
                   href={`dashboard/${el.id}`}
@@ -36,7 +45,7 @@ const CourseSidebar = () => {
           </AccordionItem>
           <AccordionItem value={`item-2`}>
             <AccordionTrigger>MODULE 2</AccordionTrigger>
-            {reactVideos.map((el) => (
+            {data.map((el) => (
               <AccordionContent key={el.id}>
                 <Link
                   href={"/"}
