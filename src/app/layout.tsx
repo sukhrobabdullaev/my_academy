@@ -12,7 +12,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { AppWrapper } from "@/context";
 import { usePathname } from "next/navigation";
-import CourseSidebar from "./course/[slug]/dashboard/courseSidebar";
 import ParentComponent from "./course/[slug]/dashboard/components/parent";
 
 const inter = Inter({ subsets: ["latin"] });
