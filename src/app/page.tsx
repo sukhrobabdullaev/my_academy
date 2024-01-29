@@ -39,8 +39,14 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="relative sm:w-64 sm:h-64">
-        <Image src={"/js-icon.png"} fill priority alt="js-icon" />
+      <div className="relative w-64 h-64" style={{ height: "250px" }}>
+        <Image
+          src={"/js-icon.png"}
+          fill
+          priority
+          alt="js-icon"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 64px"
+        />
       </div>
     </div>
   );

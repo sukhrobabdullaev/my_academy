@@ -12,7 +12,7 @@ const Courses = () => {
       <h2 className="text-[30px] mb-3">Kurslar</h2>
       <div className="flex items-center gap-3 flex-wrap">
         <HoverCard>
-          <HoverCardTrigger className="relative">
+          <div className="relative">
             <Link
               href="/"
               className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center justify-center bg-zinc-50 dark:bg-zinc-900"
@@ -22,10 +22,11 @@ const Courses = () => {
                 alt="react"
                 width={150}
                 height={150}
+                priority={true}
               />
               <h3 className="font-bold text-md">ReactJS</h3>
             </Link>
-          </HoverCardTrigger>
+          </div>
           <HoverCardContent className="absolute bottom-2">
             <div className="line-clamp-2 text-sm">
               Hozirda mashhur JavaScript frameworklaridan biri ReactJSni to'liq

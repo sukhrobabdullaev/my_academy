@@ -34,7 +34,7 @@ const Sidebar = () => {
           isShow && "hidden"
         }  md:block sm:block dark:bg-zinc-900 p-4 fixed top-14 lg:w-64 left-0 h-full border-r`}
       >
-        <ul
+        <div
           className={`flex md:gap-3 gap-2 items-center justify-center flex-col pt-20 ${ubuntu.className}`}
         >
           <Link
@@ -107,7 +107,7 @@ const Sidebar = () => {
               </span>
             </Link>
           )}
-        </ul>
+        </div>
 
         {isSignedIn && isLoaded ? (
           <div
@@ -117,7 +117,9 @@ const Sidebar = () => {
             <span className={`${!isShow ? "block" : "hidden"} lg:block`}>
               Chiqish
             </span>
-            <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
+            <div>
+              <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
+            </div>
           </div>
         ) : (
           <Link
@@ -127,7 +129,9 @@ const Sidebar = () => {
             <span className={`${!isShow ? "block" : "hidden"} lg:block`}>
               Dasturga kirish
             </span>
-            <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
+            <div>
+              <ArrowRightEndOnRectangleIcon className="w-6 h-6" />
+            </div>
           </Link>
         )}
       </div>
