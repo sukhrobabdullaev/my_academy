@@ -14,7 +14,7 @@ const Courses = () => {
         <HoverCard>
           <HoverCardTrigger className="relative">
             <Link
-              href="course/react"
+              href="/"
               className="flex flex-col gap-2 shadow-md lg:h-64 lg:w-64 p-6 rounded-md border items-center justify-center bg-zinc-50 dark:bg-zinc-900"
             >
               <Image
