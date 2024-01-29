@@ -6,7 +6,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
-const Courses = async () => {
+const Courses = () => {
   return (
     <div className="lg:ml-64 md:ml-20 sm:ml-24">
       <h2 className="text-[30px] mb-3">Kurslar</h2>
@@ -34,10 +34,9 @@ const Courses = async () => {
             </div>
           </HoverCardContent>
         </HoverCard>
-      
       </div>
     </div>
   );
 };
 
-export default Courses
+export default Courses;
