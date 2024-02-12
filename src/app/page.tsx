@@ -14,7 +14,7 @@ const Home = () => {
       className={`${quicksand.className} lg:ml-64 md:ml-20 sm:ml-24 md:p-10 sm:p-5 p-4 bg-zinc-50 dark:bg-zinc-900 sm:flex sm:items-center sm:justify-around rounded-md`}
     >
       <div className="basis-1/2">
-        <h1 className="lg:text-[30px] md:text-[24px] sm:text-[20px] text-[26px] mb-3">
+        <h1 className="lg:text-3xl md:text-[24px] sm:text-[20px] text-[26px] mb-3">
           <span className="text-[#3bc43f] font-bold">Academy</span> - dasturlash
           darslari
         </h1>

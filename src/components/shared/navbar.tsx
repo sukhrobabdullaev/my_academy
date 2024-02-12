@@ -7,6 +7,7 @@ import { Contact } from "./contact";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useAppContext } from "@/context";
 import { SidebarCloseIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const league_Spartan = League_Spartan({ subsets: ["latin"] });
 
@@ -33,11 +34,8 @@ const Navbar = () => {
                 onClick={handleShow}
               />
             )}
-          
-            <Link
-              href="/"
-              className={`${league_Spartan.className} font-bold text-[30px]`}
-            >
+
+            <Link href="/" className={league_Spartan.className}>
               academy.
             </Link>
           </div>
